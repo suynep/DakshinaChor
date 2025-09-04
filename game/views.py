@@ -37,6 +37,12 @@ def home_view(request):
 def play(request):
     return render(request, "game/play.html")
 
+def play1(request):
+    return render(request, "game/play-1.html")
+
+def play2(request):
+    return render(request, "game/play-2.html")
+
 def create_room(request):
     return render(request, "game/createroom.html")
 
