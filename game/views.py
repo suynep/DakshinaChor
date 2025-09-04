@@ -72,6 +72,12 @@ def create_user(request):
 
     return render(request, "game/createuser.html")
 
+def game_play(request):
+    return render(request, "game/game-play.html")
+
+def rules(request):
+    return render(request, "game/rules.html")
+
 def create_room(request):
     # railguard
     if not request.session.get('username'):
