@@ -8,5 +8,6 @@ urlpatterns = [
     path("play-2/", views.play2, name='play2'),
     path("enter-name/", views.enter_name, name='enter name'),
     path("game-play/", views.game_play, name='game play'),
+    path("rules/", views.rules, name='rules'),
     path("create/", views.create_room, name='create room'),
 ]

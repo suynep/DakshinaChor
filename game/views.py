@@ -49,6 +49,9 @@ def enter_name(request):
 def game_play(request):
     return render(request, "game/game-play.html")
 
+def rules(request):
+    return render(request, "game/rules.html")
+
 def create_room(request):
     return render(request, "game/createroom.html")
 
