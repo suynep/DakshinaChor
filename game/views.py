@@ -43,6 +43,9 @@ def play1(request):
 def play2(request):
     return render(request, "game/play-2.html")
 
+def enter_name(request):
+    return render(request, "game/enter-name.html")
+
 def create_room(request):
     return render(request, "game/createroom.html")
 

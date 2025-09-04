@@ -6,5 +6,6 @@ urlpatterns = [
     path("play/", views.play, name='play'),
     path("play-1/", views.play1, name='play1'),
     path("play-2/", views.play2, name='play2'),
+    path("enter-name/", views.enter_name, name='enter name'),
     path("create/", views.create_room, name='create room'),
 ]
