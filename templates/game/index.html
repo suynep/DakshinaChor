@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: "Noto Sans Devanagari", sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Yellow decorative circles */
+    .circle {
+      position: absolute;
+      background: #CAD904;
+      border-radius: 50%;
+    }
+
+    .circle.top-left {
+      width: 150px;
+      height: 150px;
+      top: -50px;
+      left: -50px;
+    }
+
+    .circle.bottom-right {
+      width: 180px;
+      height: 180px;
+      bottom: -60px;
+      right: -60px;
+    }
+
+    .circle.small1 {
+      width: 20px;
+      height: 20px;
+      bottom: 80px;
+      left: 40px;
+    }
+
+    .circle.small2 {
+      width: 25px;
+      height: 25px;
+      top: 120px;
+      right: 60px;
+    }
+
+    .content {
+      text-align: center;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #CAD904;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .title {
+      margin-top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Yellow background circles -->
+  <div class="circle top-left"></div>
+  <div class="circle bottom-right"></div>
+  <div class="circle small1"></div>
+  <div class="circle small2"></div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="logo">
+  <img src="{% static 'images/logoFinalFinal.png' %}" alt="Chor Logo">
+    </div>
+    <div class="title">दक्षिणा चोर</div>
+  </div>
+</body>
+</html>
