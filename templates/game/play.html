@@ -345,8 +345,21 @@
         <img src="{% static 'images/chor.jpeg' %}" alt="Chor Card">
       </div>
       <div class="chor-btns">
-        <a href="/join"><button class="chor-btn">Join an अड्डा</button></a>
-        <a href="/create"><button class="chor-btn yellow">Generate अड्डा Code</button></a>
+
+        {% if room %}
+
+          <a href="#"><button class="chor-btn yellow">Existing अड्डा</button></a>
+          <a href="/join"><button class="chor-btn">Join an अड्डा</button></a>
+          <a href="/create"><button class="chor-btn">Generate अड्डा Code</button></a>
+
+        {% else %}
+
+          <a href="/join"><button class="chor-btn">Join an अड्डा</button></a>
+          <a href="/create"><button class="chor-btn yellow">Generate अड्डा Code</button></a>
+
+        {% endif %}
+
+
       </div>
     </section>
   </main>

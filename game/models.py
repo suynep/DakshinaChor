@@ -7,12 +7,13 @@ from users.models import Player
 # Association table between Room and Player
 class RoomPlayer(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    player = models.CharField(max_length=25, blank=True, null=True)
     joined_at = models.DateTimeField(auto_now_add=True)
 
 # Association table between Player and Card
 class PlayerCard(models.Model):
-    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    player = models.CharField(max_length=25, blank=True, null=True)
     card = models.ForeignKey('Card', on_delete=models.CASCADE)
     assigned_at = models.DateTimeField(auto_now_add=True)
 

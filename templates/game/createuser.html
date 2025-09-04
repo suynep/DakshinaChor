@@ -349,14 +349,20 @@
   </nav>
   <main class="main-content">
     <section class="chor-section">
-      <div class="chor-headline">what should we<br>call you?</div>
+      <div class="chor-headline"><span style="color: var(--yellow);">नाम</span><br>भनिदेऊ न</div>
       
-      <div class="code-input-div">
-        <input class="code-input" type="text" placeholder="Soniya Don" name="name" />
-      </div>
-      <div class="chor-btns">
-        <button class="chor-btn yellow">Let's Go!</button>
-      </div>
+      {% if error %}
+      <span style="color: red;">{{ error }}</span> 
+      {% endif %}
+      <form method="post" class="chor-form" autocomplete="off" style="width:100%;margin-top:1.2rem;">
+        {% csrf_token %}
+        <div class="code-input-div">
+          <input class="code-input" type="text" placeholder="Soniya Don" name="username" />
+        </div>
+        <div class="chor-btns">
+          <button class="chor-btn yellow" type="submit">Let's Go!</button>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="footer">
