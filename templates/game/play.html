@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dakshina Chor</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
@@ -20,7 +23,7 @@
       margin: 0;
       padding: 0;
       background: var(--gray);
-      font-family: 'Montserrat', 'Noto Sans Devanagari', sans-serif;
+      font-family: 'Rozha One', sans-serif;
       color: var(--black);
       min-height: 100vh;
       width: 100vw;
@@ -131,7 +134,11 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 1.2rem;
-      font-family: 'Montserrat', 'Noto Sans Devanagari', sans-serif;
+      font-family: 'Rozha One',  sans-serif;
+      margin-bottom: 1em;
+    }
+    .chor-headline span {
+      color: var(--yellow);
     }
     .chor-img {
       width: 170px;
@@ -332,7 +339,7 @@
   </nav>
   <main class="main-content">
     <section class="chor-section">
-      <div class="chor-headline">Ready to be the<br>CHOORRR?</div>
+      <div class="chor-headline">Ready to be the <span>CHOORRR?</span></div>
       <div class="chor-img">
         <img src="{% static 'images/chor.jpeg' %}" alt="Chor Card">
       </div>
