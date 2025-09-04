@@ -331,6 +331,11 @@
         border: 1px solid #d9d9d9;
         width: 100%;
     }
+    form {
+      width: 100%;
+      margin-top: 1.5em;
+    }
+
   </style>
 </head>
 <body>
@@ -353,12 +358,14 @@
       <div class="chor-img">
         <img src="{% static 'images/chor.jpeg' %}" alt="Chor Card">
       </div>
-      <div class="code-input-div">
-        <input class="code-input" type="text" placeholder="123456" value="123456" name="code" />
-      </div>
-      <div class="chor-btns">
-        <button class="chor-btn yellow">Let's Start Chori!</button>
-      </div>
+      <form action="" method="post">
+        <div class="code-input-div">
+          <input class="code-input" type="text" placeholder="123456" value="123456" name="code" />
+        </div>
+        <div class="chor-btns">
+          <button class="chor-btn yellow" type="submit">Let's Start Chori!</button>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="footer">

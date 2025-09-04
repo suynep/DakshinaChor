@@ -326,9 +326,11 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="{% static 'images/logoFinalFinal.png' %}" alt="Logo">
-    </div>
+    <a href="/">
+      <div class="navbar-logo">
+        <img src="{% static 'images/logoFinalFinal.png' %}" alt="Logo">
+      </div>
+    </a>
     <div class="navbar-menu" id="menuBtn" tabindex="0" aria-label="Open menu" aria-haspopup="true">
       <i class="fa fa-bars fa-xl" aria-hidden="true"></i>
     </div>
@@ -340,17 +342,18 @@
   </nav>
   <main class="main-content">
     <section class="chor-section">
-      <div class="chor-headline">Create <span style="color: var(--yellow);">Room</span></div>
+      <div class="chor-headline">Create <span style="color: var(--yellow);">अड्डा</span></div>
       <div class="chor-img">
         <img src="{% static 'images/chor.jpeg' %}" alt="Chor Card">
       </div>
       <form method="post" class="chor-form" autocomplete="off" style="width:100%;margin-top:1.2rem;">
         {% csrf_token %}
         <div style="display:flex;align-items:center;gap:0.5rem;width:100%;margin-bottom:1.2rem;">
-          <input type="text" name="room_code" value="{{ room_code }}" style="flex:1;font-size:1.15rem;padding:0.8rem 1rem;border-radius:8px;border:2px solid #e0e0e0;background:#fff;box-shadow:var(--shadow);font-weight:600;letter-spacing:1px;">
+          <input type="text" name="room_code" value="{{ room_code }}" style="flex:1 1 0%;min-width:0;font-size:1.15rem;padding:0.8rem 1rem;border-radius:8px;border:2px solid #e0e0e0;background:#fff;box-shadow:var(--shadow);font-weight:600;letter-spacing:1px;max-width:100%;box-sizing:border-box;">
           <button type="button" onclick="copyRoomCode()" style="background:none;border:none;cursor:pointer;padding:0 0.5rem;">
             <i class="fa fa-copy fa-lg" aria-hidden="true"></i>
           </button>
+        </div>
         </div>
         <button type="submit" class="chor-btn yellow" style="margin-top:0.5rem;">Let's Start Chori!</button>
       </form>
