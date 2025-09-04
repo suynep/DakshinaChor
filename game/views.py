@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,
+from django.shortcuts import render, redirect
 from .models import RoomPlayer,PlayerCard,Card
 from rooms.models import Room
 from users.models import Player
@@ -15,7 +15,7 @@ cards=[
     "changa", "changa", "changa", "changa"
 ]
 
-card_points=[
+card_points= {
     "baje": 900,
     "mama": 800,
     "rakshi": 700,
@@ -25,13 +25,13 @@ card_points=[
     "taas": 300,
     "tika+jamara": 200,
     "changa": 100
-]
+}
 
 players=["Player 1", "Player 2","Player 3","Player 4","Player 5",]
 
 #homepage
-def home(request):
-    return render(request, "game/home.html")
+def home_view(request):
+    return render(request, "game/index.html")
 
 #create and join rooms
 def create_room(request):
