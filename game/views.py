@@ -34,11 +34,11 @@ def home_view(request):
     return render(request, "game/index.html")
 
 #create and join rooms
-def create_room(request):
+def play(request):
     return render(request, "game/play.html")
 
-def join_room(request):
-    pass
+def create_room(request):
+    return render(request, "game/createroom.html")
 
 def calculate_points(request):
     pass
